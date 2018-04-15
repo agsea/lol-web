@@ -1,0 +1,9 @@
+/*** 实用 NPM 工具包 ***/
+
+1.array-uniq：
+数组去重，结合ECMAScript2015新特性Set使用能更好地发挥该工具的作用，当数组较大时表现更为明显。
+2.easyscroll：
+vue滚动条插件（插件采用jsx语法，使用前需要安装插件：babel-plugin-syntax-jsx、babel-plugin-transform-vue-jsx、
+babel-helper-vue-jsx-merge-props，）
+3.merge:
+对象合并插件

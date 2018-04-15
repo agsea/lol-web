@@ -1,0 +1,16 @@
+1.组件选项name（或vue单文件组件中导出组件时name属性）的作用：
+允许组件递归调用自身，但应设置递归结束的条件以避免无限递归；便于调试；默认的，组件id被作为为name
+
+2.ESLint错误：
+‘Unexpected trailing comma’：多余的逗号
+
+3.本项目使用vuex状态管理插件，统一管理组件间共用状态
+
+4.引入非模块化外部JS文件：
+【思想】：使用script-loader执在全局作用域下执行一遍指定js文件，则该js文件中的非闭包内的方法及变量都将全局可用，
+若采用组件化的开发方式，应当在使用到的组件初始化或挂载完成之后再使用（如vue组件的mounted生命周期钩子）；此外，
+若项目中使用了eslint做代码检查，应该关闭‘no-undef’规则或只设置为警告以确保未定义的变量能被编译通过
+【用法】：require('script-loader!../../lib/particles.min');    //普通js文件的绝对路径
+     require('script-loader!particles.js');     //通过npm方式下载
+
+5.对于需要打包的静态文件，将其放置于static文件夹下会被自动打包进dist/static目录下

@@ -1,0 +1,29 @@
+# 默认npm仓库地址：https://registry.npmjs.org/
+
+# 使用淘宝镜像：npm config set registry https://registry.npm.taobao.org
+(当你想发布自己的包时，需要将地址修改回来)
+
+# 安装项目依赖：
+npm install
+或
+npm install yarn -g
+yarn install
+
+# 使用yarn安装一个或多个依赖：
+yarn add <package...> [--dev/-D]
+# 使用yarn一处一个或多个依赖：
+yarn remove <package...>
+
+
+# 打包注意事项：
+1.生产环境打包后图片等引用问题：
+//修改 build/utils.js 中 ExtractTextPlugin.extract 的参数对象，添加属性“publicPath:'../../'”
+//修改 config/index.js 中 module.exports.build.assetsPublicPath 的值，修改为“'./'”
+
+4.关于开发环境编辑器的设置：
+如缩进值等，在.editorconfig文件中
+
+
+# 快捷键问题：
+ctrl+alt+方向键上键，出现屏幕旋转180度，是因为显卡优先响应了事件，桌面右键-》图形选项-》快捷键，选择禁用即可。
+
